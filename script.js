@@ -1,8 +1,8 @@
 const fontSizeInput = document.getElementById('fontSize');
 const fontUnitSelect = document.getElementById('fontUnit');
+const customTextInput = document.getElementById('customText');
 const applyButton = document.getElementById('applyButton');
 const previewSection = document.getElementById('previewSection');
-
 
 function applyFontSize() {
     const fontSize = fontSizeInput.value;
@@ -19,8 +19,18 @@ function applyFontSize() {
     previewSection.querySelector('small').style.fontSize = `${fontSize * 0.8}${fontUnit}`;
 }
 
+function applyCustomText() {
+    const customText = customTextInput.value || "Sample Text";
 
-applyButton.addEventListener('click', applyFontSize);
+    previewSection.querySelectorAll('h1, h2, h3, h4, h5, h6, p, blockquote, small').forEach(element => {
+        element.textContent = customText;
+    });
+}
 
+function applyChanges() {
+    applyFontSize();
+    applyCustomText();
+}
 
-applyFontSize();
+applyButton.addEventListener('click', applyChanges);
+applyChanges();

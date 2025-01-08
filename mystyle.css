@@ -57,3 +57,9 @@ blockquote {
     border-left: 3px solid #555555; 
     color: #aaaaaa; 
 }
+
+.font-size-info {
+    margin-top: 5px;
+    font-style: italic;
+    color: gray;
+}
