@@ -63,3 +63,41 @@ blockquote {
     font-style: italic;
     color: gray;
 }
+
+.font-size-display {
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: #666;
+}
+
+#customText {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+#customText:focus {
+    border-color: #bed2e8;
+    box-shadow: 0 0 5px rgba(176, 204, 234, 0.5);
+}
+
+#applyButton {
+    background-color: #0056b3; /* Darker blue color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#applyButton:hover {
+    background-color: #004494; /* Even darker blue on hover */
+}

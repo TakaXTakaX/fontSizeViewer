@@ -34,3 +34,28 @@ function applyChanges() {
 
 applyButton.addEventListener('click', applyChanges);
 applyChanges();
+
+function displayFontSizes() {
+    previewSection.querySelectorAll('h1, h2, h3, h4, h5, h6, p, blockquote, small').forEach(element => {
+        const computedFontSize = window.getComputedStyle(element).fontSize;
+        let fontSizeDisplay = element.querySelector('.font-size-display');
+
+        // If the display span doesn't exist, create it
+        if (!fontSizeDisplay) {
+            fontSizeDisplay = document.createElement('span');
+            fontSizeDisplay.className = 'font-size-display';
+            fontSizeDisplay.style.marginLeft = '10px';
+            fontSizeDisplay.style.fontSize = '0.8em'; // Smaller font size for the display text
+            fontSizeDisplay.style.color = '#666'; // Subtle color for display
+            element.appendChild(fontSizeDisplay);
+        }
+
+        fontSizeDisplay.textContent = `(${computedFontSize})`;
+    });
+}
+
+function applyChanges() {
+    applyFontSize();
+    applyCustomText();
+    displayFontSizes();
+}
