@@ -45,8 +45,8 @@ function displayFontSizes() {
             fontSizeDisplay = document.createElement('span');
             fontSizeDisplay.className = 'font-size-display';
             fontSizeDisplay.style.marginLeft = '10px';
-            fontSizeDisplay.style.fontSize = '0.8em'; // Smaller font size for the display text
-            fontSizeDisplay.style.color = '#666'; // Subtle color for display
+            fontSizeDisplay.style.fontSize = '0.8em'; 
+            fontSizeDisplay.style.color = '#666'; 
             element.appendChild(fontSizeDisplay);
         }
 
