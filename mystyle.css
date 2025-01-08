@@ -88,7 +88,7 @@ blockquote {
 }
 
 #applyButton {
-    background-color: #0056b3; /* Darker blue color */
+    background-color: #0056b3; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -99,5 +99,5 @@ blockquote {
 }
 
 #applyButton:hover {
-    background-color: #004494; /* Even darker blue on hover */
+    background-color: #004494; 
 }
